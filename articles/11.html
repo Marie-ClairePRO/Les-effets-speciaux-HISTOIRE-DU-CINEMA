@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stagnation</title>
+    <link rel="icon" type="../img/favicon" href="../img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">  <!-- https://fontawesome.com/-->  
+    <link rel="stylesheet" href="../css/magnific-popup.css">       <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="../css/tooplate-vertex.css">
+<!--
+
+Introduction page
+
+-->
+
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
+
+    <!-- Content -->
+    <main>
+        
+        <!-- Nav -->
+        <div class="tm-nav">
+            <button class="navbar-toggler" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="tm-main-nav">
+                <li class="nav-item">                                
+                    <a href="10crisecinema.html" class="nav-link">
+                        Article précédent : La crise des effets spéciaux
+                    </a>
+                </li>
+                <li class="nav-item">                                
+                    <a href="../index.html" class="nav-link">
+                        Retour menu
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="12SpaceOdyssee.html" class="nav-link">
+                        Article suivant : 2001 a Space Odyssee
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="texte" class="tm-section">
+            <div class="tm-section-art-col-text tm-content">
+                <h2 class="tm-text-primary">Jason et les Argonautes 1963</h2>
+                <p align="justify">Dans les années 1950, c'est la stop motion l'effet spécial qui fonctionne le mieux, adapté à la fantaisie mythologique, sous-genre qui gagne en popularité. Le spécialiste de la stop motion Ray Harryhausen participe à de nombreux films et contribue au succès du sous-genre. Dans Jason et les Argonautes, Harryhausen réalise des exploits techniques et esthétiques : il donne vie à des créatures volantes (les Harpies), à une statue géante aux mouvements saccadés (Talos), à une créature à sept têtes (l'Hydre) et surtout aux sept squelettes finaux, qui interagissent avec trois acteurs. En tant que producteur associé, Harryhausen garde le contrôle des séquences truquées afin de ne pas risquer de voir ses trucages gâchés par un mauvais choix de cadre ou de montage : le temps nécessaire à l'animation image par image (plus de quatre mois pour les seuls squelettes) rend impossible toute improvisation.
+                </p>
+                <hr class="tm-hr tm-ml tm-sm-mt-30">
+                <h2 class="tm-text-primary">Mary Poppins 1964</h2>
+                <p align="justify">
+                Alors que leurs concurrents sont en train de supprimer leurs départements d'effets spéciaux, les studios Disney décident de se lancer dans le long métrage live dans les années 1950. Le style Disney imposant que ces acteurs puissent réaliser de multiples prouesses, chaque film regorge d'effets spéciaux, variés et omniprésents. Mary Poppins en est l'exemple le plus représentatif, avec des effets de décor (vues de Londres mi-réalistes mi-poétiques, par peinture sur verre) et un important travail d'intégration qui a pour but de plonger Mary et ses amis au sein d'un dessin animé. Les techniques traditionnelles de compositing ne peuvent fonctionner à cause d'un détail : la nurse anglaise porte un chapeau doté d'un voile fin. De ce fait, le studio utilise le travelling matte à vapeur de sodium qui est extrêmement coûteux, pour lequel il recevra un Oscar en 1965. Dans ce procédé, le travelling matte est réalisé directement dans la caméra. On utilise un prisme et une caméra munie de deux chargeurs de pellicule, ainsi que des lampes à vapeur de sodium qui éclairent le fond deriière les acteurs d'une lueur orange afin de le rendre invisible à la caméra ; au lieu de ce fond, cette dernière imprime sur la pellicule d'un des deux chargeurs le dessin animé qui défile dans l'autre au même moment. C'est une technique extrêmement fine qui permet une rotoscopie parfait sur des détails qui, encore aujourd'hui, posent énormément de problèmes à détourer : en particulier la transparence du tissu, ou les mini détails comme les cheveux.
+                </p>
+            </div>
+            <div class="tm-section-art-col-video tm-content-video" data-parallax="scroll">   
+                <br><br><br>
+                <p>Jason et les Argonautes, Don Chaffey, 1963.</p>
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/dqRjDGAJ5dc?si=rKBJpsIX9z3wLQCu?controls=1">
+            </iframe><br>
+            <p>Mary Poppins, Robert Stevenson, 1964.</p>
+            <video width="420" controls>
+            <source src="../img/marypoppins.mp4">
+            </video><br>
+            
+        </div></div>
+
+                  
+
+
+    </main>
+
+
+
+
+
+
+    <script src="../js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+           
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#pres').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>

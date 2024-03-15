@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La couleur</title>
+    <link rel="icon" type="../img/favicon" href="../img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">  <!-- https://fontawesome.com/-->  
+    <link rel="stylesheet" href="../css/magnific-popup.css">       <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="../css/tooplate-vertex.css">
+<!--
+
+Introduction page
+
+-->
+
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
+
+    <!-- Content -->
+    <main>
+        
+        <!-- Nav -->
+        <div class="tm-nav">
+            <button class="navbar-toggler" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="tm-main-nav">
+                <li class="nav-item">                                
+                    <a href="08filmsAnnees30.html" class="nav-link">
+                        Article précédent : Les films des années 30
+                    </a>
+                </li>
+                <li class="nav-item">                                
+                    <a href="../index.html" class="nav-link">
+                        Retour menu
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="10crisecinema.html" class="nav-link">
+                        Article suivant : La crise des effets spéciaux
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="texte" class="tm-section">
+            <div class="tm-section-art-col-text tm-content">
+                <h2 class="tm-text-primary">Les débuts de la couleur</h2>
+                <p align="justify">
+                De 1935 à la fin des années 1940, les premiers films en Technicolor trichrome nécessitent au tournage trois pellicules (rouge, vert, bleu), et les techniques d'effets spéciaux doivent s'adapter à cette nouvelle contrainte. La couleur crée des problèmes tels que le liseré bleu autour des acteurs ou des objets filmés sur fond bleu puis incrustés dans une autre image. Le premier film utilisant le procédé Technicolor bichrome est The Toll of the Sea sorti en 1922. Ensuite, en 1928, sort le procédé Technicolor trichrome, utilisant trois négatifs en noir et blanc sensibles aux couleurs rouge, verte et bleue. La caméra Technicolor est très lourde et volumineuse. La plupart des films continuent jusqu'aux années 1940 à être produits en noir et blanc.
+                </p>
+                <h2 class="tm-text-primary">La couleur s'impose lentement dans le cinéma</h2>
+                <p align="justify">
+                Les studios frileux de tenter ces techniques, qui montrent beaucoup d'erreurs, ne s'essaient pas au procédé Technicolor, qui se retourne alors vers les studios Disney qui voient en Technicolor trichrome une révolution du cinéma. Après quelques essais fructueux, ils sortent en 1937 le premier long métrage couleur : Blanche-Neige et les Sept Nains. Des gros succès s'ensuivent et prouvent la qualité de Technicolor comme Le Magicien d'Oz et Autant en Emporte le Vent en 1939.
+
+                <h2 class="tm-text-primary">Adaptation des effets spéciaux</h2>
+                <p align="justify">Le Voleur de Bagdad de 1940 (The Thief of Bagdad) est le premier film couleur à utiliser de nombreux effets spéciaux. Le matte painting est en particulier l'effet spécial le plus difficile à adapter à l'arrivée de la couleur car la transition doit être parfaite en teinte. De nombreuses peintures sont réalisées afin de servir de décor fantastique. Les travellings matte utilisés pour y intégrer les acteurs ou donner l'illusion de l'envol d'un cheval prennent en compte la couleur et permettent un travail précis. Le peintre britannique Walter Percy Day y utilise différentes techniques d'incrustation pour ajouter par exemple des nuages en mouvement qui confèrent à ses peintures une échelle de taille mais aussi des éléments « vivants », animés.
+                </p>
+                
+            </div>
+            <div class="tm-section-art-col-video tm-content-video" data-parallax="scroll">   
+            
+                <p>The Toll of the Sea, Chester Franklin, 1922.</p>
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/q_4lzDbuO3A?si=NXNNzlOrlI0RoQFI?controls=1">
+            </iframe><br>
+            <p>The Thief of Bagdad, 1940.</p>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/TMiF67ggUOM?si=7hVhhfo_cORNBfoa?controls=1">
+            </iframe>
+            
+        </div></div>
+
+                  
+
+
+    </main>
+
+
+
+
+
+
+    <script src="../js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+           
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#pres').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -3,34 +3,477 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+    <title>Effets spéciaux</title>
+    <link rel="icon" type="img/favicon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">  <!-- https://fontawesome.com/-->  
+    <link rel="stylesheet" href="css/magnific-popup.css">       <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="css/tooplate-vertex.css">
+
+<!--
+
+Tooplate 2124 Vertex
+
+https://www.tooplate.com/view/2124-vertex
+
+-->
+
 </head>
 <body>
-    <header>
-        <h1>Welcome to Your Website</h1>
-    </header>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
 
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
+    <!-- Site logo 
+    <h1 class="tm-brand">
+        <i class="fas fa-mountain fa-2x tm-brand-icon"></i>
+        <span class="tm-brand-text">Voyage dans les effets spéciaux au cinéma</span>        
+    </h1> -->
+
+    <!-- Nav -->
+    <nav class="tm-nav">
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul id="tm-main-nav">
+            <li class="nav-item">                                
+                <a href="#pres" class="nav-link current">
+                    Les pionniers
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#debut" class="nav-link">
+                    L'âge d'or
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#Puis" class="nav-link">
+                    La crise
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#gallery" class="nav-link">
+                    Le numérique
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">
+                    Aujourd'hui et futur
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
     <main>
-        <p>This is a simple webpage using HTML and PHP.</p>
+        <div id="pres" class="tm-section">
+            <!-- Intro left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img src="img/George_Melies.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/01introduction.html" class="tm-text-primary">Introduction</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Présentation du début des effets spéciaux on-set ou post-production. Le pionnier : Georges Méliès.                         
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1895 - 1912
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
 
-        <?php
-            $name = "Guest";
-            if (isset($_GET['name'])) {
-                $name = $_GET['name'];
-            }
-        ?>
-        
-        <p>Hello, <?php echo $name; ?>!</p>
+                <div class="tm-media">
+                    <img src="img/Melies.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/02AnalyseMelies.html" class="tm-text-primary">Analyse du Voyage dans la Lune</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Analyse des premières techniques d'effets spéciaux du film culte des premières années.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1901
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+    
+                <div class="tm-media">
+                    <img src="img/cameraLumier.png" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/03histoireDuCinema.html" class="tm-text-primary">Une brève histoire du cinéma et des technologies</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Les époques clées de l'évolution du 7e art.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1895 - aujourd'hui
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img src="img/Poppins.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/04LesFilmsCles.html" class="tm-text-primary">Corpus des films clés</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Les films qui ont marqué l'histoire des effets spéciaux et le cinéma
+                            évoqués dans tous les articles, et les techniques utilisées.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1895 - aujourd'hui
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                <div class="tm-text-right">
+                    <a href="#debut" class="tm-btn tm-btn-next">Suivant</a>
+                </div>   
+                
+            </div>
+            
+            <!-- Intro right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="img/BGdebuts.jpg"></div>
+        </div> <!-- #pres -->
 
-        <form action="process.php" method="post">
-            <label for="name">Enter your name:</label>
-            <input type="text" id="name" name="name" required>
-            <button type="submit">Submit</button>
-        </form>
+        <div id="debut" class="tm-section">
+            <!-- Intro left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img src="img/hotel.png" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/05experimentations.html" class="tm-text-primary">Les expérimentations</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Retour sur la découverte dans les années 1900 des effets spéciaux les plus couramment utilisés par la suite.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1903 - 1920
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img src="img/benhur.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/06essor.html" class="tm-text-primary">L'essor des effets spéciaux</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Le cinéma devient une industrie organisée et prolifique. Retour sur la décennie avant le son et la couleur.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1920 - 1927
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+
+                <div class="tm-media">
+                    <img src="img/sonpellicule.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/07leSon.html" class="tm-text-primary">Les débuts des films sonores</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            L'arrivée du son implique de tourner en studio, et les effets spéciaux s'adaptent à cette forte contrainte.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1927 - 1950
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+
+                <div class="tm-media">
+                    <img src="img/citizen_kane.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/08filmsAnnees30.html" class="tm-text-primary">Les films des années 30</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Les derniers effets cultes qui ont marqué les années 30 et début des années 40 avant la transition de la couleur.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1930 - 1945
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+
+                
+                <div class="tm-media">
+                    <img src="img/magicienOz.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/09la couleur.html" class="tm-text-primary">Les premiers films couleur</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Les premiers effets spéciaux sur des films en couleur.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1935 - 1950
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+            
+            
+            <div class="tm-text-right">
+                <a href="#Puis" class="tm-btn tm-btn-next">Suivant</a>
+            </div>
+        </div>   
+            <!-- Intro right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="img/BGnosferatu.jpg"></div>
+        </div> <!-- #debut -->
+
+        <div id="Puis" class="tm-section">
+            <!-- Puis left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img src="img/UbuRoi.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/10crisecinema.html" class="tm-text-primary">La crise des effets spéciaux</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Les "30 Glorieuses" dès 1945, apparition de surconsommation, fin de la guerre, et télévision couleur HD vers 1950 mènent le cinéma en crise.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1950 - 1980
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                <div class="tm-media">
+                    <img src="img/Poppins.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/11.html" class="tm-text-primary">Stagnation des effets spéciaux</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Deux films marquants de deux décennies peu prolifiques.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1950 - 1968
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img src="img/2001.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/12SpaceOdyssee.html" class="tm-text-primary">2001 : un film qui bouleverse les effets spéciaux</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Analyse des effets spéciaux de 2001 l'Odyssée de l'Espace.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1935 - 1950
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-text-right">
+                    <a href="#gallery" class="tm-btn tm-btn-next">Suivant</a>
+                </div>                
+                
+            </div>
+        <!-- Intro right -->
+        <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="img/BGXXe.jpg"></div>             
+            
+        </div>
+
+
+        <div id="gallery" class="tm-section">
+            <!-- About left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img src="img/Maitre-yoda.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/13nouvelaged'or.html" class="tm-text-primary">Un nouvel âge d'or des VFX</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Les nouvelles technologies et le début des ordinateurs propulsent enfin le cinéma vers quelque chose de nouveau.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1977 - 1990
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                <div class="tm-media">
+                    <img src="img/tron.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/14numérique.html" class="tm-text-primary">Les débuts du numérique</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            La montée en puissance rapide des effets numériques et des images de synthèse.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1982 - 1993
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-media">
+                    <img src="img/BGavatar.jpg" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/15erenumerique.html" class="tm-text-primary">L'ère du numérique</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Les VFX numériques s'imposent pour pouvoir réaliser n'importe quel effet spécial.
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            1993 - aujourd'hui
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>
+                
+                <div class="tm-text-right">
+                    <a href="#about" class="tm-btn tm-btn-next">Suivant</a>
+                </div>                
+                
+            </div>
+            
+            <!-- About right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="img/BGXXIe.jpg"></div>
+        </div> <!-- #about -->
+
+
+
+        <div id="about" class="tm-section">
+            <!-- About left -->
+            <div class="tm-section-col tm-content">
+                <div class="tm-media">
+                    <img src="img/apparences.png" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/16repensercinema.html" class="tm-text-primary">Repenser le cinéma</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Le numérique permet des nouvelles façons de penser le cinéma
+                        </p>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div> 
+                <div class="tm-media">
+                    <img src="img/sora.png" alt="Intro image">
+                    <div class="tm-media-body">
+                        <h2><a href="articles/17IA.html" class="tm-text-primary">L'intelligence artificielle</a></h2>
+                        <p class="tm-mb-20 tm-text-small">
+                            Sora, Stable Diffusion, OpenAI, Que sera le cinéma du futur ?
+                        </p>
+                        <span class="tm-text-secondary tm-media-span tm-text-small">
+                            2024
+                        </span>
+                        <hr class="tm-hr tm-mr">
+                    </div>
+                </div>  
+            <footer class="tm-copyright tm-text-small">
+                Marie-Claire Saint-Dizier IMAC3 
+                - <a href="https://www.linkedin.com/in/marie-claire-saint-dizier-5401211b9" class="tm-text-link" target="_blank">
+                    Linkedin</a>
+            </footer>  
+            </div>
+            <!-- About right -->
+            <div class="tm-section-col tm-parallax" data-parallax="scroll" data-image-src="img/sora.jpg"></div>
+        </div> <!-- #about -->
+    
     </main>
 
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> Your Website. All rights reserved.</p>
-    </footer>
+    <script src="js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+            
+            /*************** Navigation *****************/
+
+            const tmMainNav = $("#tm-main-nav");
+
+            tmMainNav.singlePageNav({
+                filter: ':not(.external)'
+            });
+
+            $('.navbar-toggler').click(function(e) {
+                e.stopPropagation();
+                tmMainNav.toggleClass('show');
+            });
+
+            $("html").click(function(e) {
+                $("#tm-main-nav").removeClass("show");
+            });
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#pres').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
 </body>
 </html>

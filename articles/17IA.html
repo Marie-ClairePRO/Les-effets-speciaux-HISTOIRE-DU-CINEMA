@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'IA au cinéma</title>
+    <link rel="icon" type="../img/favicon" href="../img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/specimen/Kumbh+Sans -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">  <!-- https://fontawesome.com/-->  
+    <link rel="stylesheet" href="../css/magnific-popup.css">       <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="../css/tooplate-vertex.css">
+<!--
+
+Introduction page
+
+-->
+
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
+
+    <!-- Content -->
+    <main>
+        
+        <!-- Nav -->
+        <div class="tm-nav">
+            <button class="navbar-toggler" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="tm-main-nav">
+                <li class="nav-item">                                
+                    <a href="16repensercinema.html" class="nav-link">
+                        Article précédent : Repenser le cinéma
+                    </a>
+                </li>
+                <li class="nav-item">                                
+                    <a href="../index.html" class="nav-link">
+                        Retour menu
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="texte" class="tm-section">
+            <div class="tm-section-art-col-text tm-content">
+                <h2 class="tm-text-primary">Une nouvelle révolution en cours</h2>
+                <p align="justify">
+                Ces dernières années de profusion de données, de 5G, de réseaux sociaux qui produisent des millions d'images chaque jour ont pavé le chemin des réseaux de neurones. Existant depuis plusieurs décennies, ceux-ci peuvent s'entraîner sur des énormes ensemble de données. Les réseaux de neurones classificateurs sont également essentiels aux réseaux de neurones génératifs, car ils ont permis des annotations sur les Gb de données. Si on a d'abord vu de nombreuses IA améliorer les effets spéciaux en général, en particulier la rotoscopie, le morphing, les modèles 3D... des nouvelles IA génératives créant de toute pièce des images voire des vidéos à partir de simples lignes de texte voient le jour depuis quelques mois. Avec la sortie de Sora par OpenIA le 15 février 2024, la génération 4k de vidéos semble plus proche que jamais. Le Deep Learning génératif se développe de façon exponentielle, et des nouveaux modèles génératifs sortent chaque semaine. Les conséquences sur le cinéma restent vagues, mais on s'attend à une création d'encore plus de contenu. Pour les effets spéciaux, c'est un nouvel outil très puissant de création 3D (les modèles génératifs d'objets 3D sont encore au début), de création d'images de décor ou de personnages. Ce qui n'est pas encore très développé est la manipulation et l'ergonomie des IA. Pour l'instant, elles restent des boîtes noires difficiles à manipuler.
+                </p>
+
+                <h2 class="tm-text-primary">Des effets spéciaux à la portée de tous</h2>
+                <p align="justify">
+                Un premier questionnement éthique causé par les effets spéciaux de Forrest Gump faisant revivre Kennedy est suivi de près par l'évolution numérique exponentielle du XXIe siècle. Mais le travail derrière chacun de ses effets est de l'ordre du travail de 20 graphistes pendant plusieurs semaines. L'intelligence artificielle dans son évolution actuelle pave la voie pour donner la capacité à tout le monde de générer à la fois le visage et la voix de n'importe qui en quelques secondes. C'est une version ultra améliorée de Forrest Gump, et les questionnement éthiques ne font que s'accélérer. Aujourd'hui, des deepfake (fausses images par Deep Learning) foisonnent sur le net.
+                </p>
+            </div>
+            <div class="tm-section-art-col-video tm-content-video" data-parallax="scroll">   
+                <br><br><br>
+                <p>Démonstration de Sora par OpenAI.</p>
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/HK6y8DAPN_0?si=X5M7syNgaBOys4fz?controls=1">
+            </iframe><br>
+            <p>Deepfake de Morgan Freeman, 2024.</p>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/oxXpB9pSETo?si=mnYMJdFiZg5kZ6Pj?controls=1">
+        </iframe><br>
+            
+        </div></div>
+
+                  
+
+
+    </main>
+
+
+
+
+
+
+    <script src="../js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+
+        $(function(){
+           
+
+            /****************** Smooth Scrolling *****************/
+
+            $(".tm-btn-next").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        // window.location.hash = hash;
+                    });
+                }
+            });
+
+            $('.tm-brand-icon').on('click', function(event) {
+                $('html, body').animate({
+                        scrollTop: $('#pres').offset().top
+                    }, 800);
+            });
+
+            /****************** Gallery ******************/
+
+            const galleryItems = document.querySelector(".tm-gallery").children;
+            const itemsPerPage = 10;
+            const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+            const pageAttribute = 'data-page';
+
+            function setPagination(currentPage) {
+                for(let i = 1; i <= totalPages; i++) {
+                    var $pager = '';
+                    
+                    if(currentPage == i) {
+                        $pager = $('<a href="javascript:void(0);" class="active tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    } else {
+                        $pager = $('<a href="javascript:void(0);" class="tm-paging-link" '+pageAttribute+'="'+i+'"></a>');
+                    }
+
+                    $pager.html(i);
+
+                    $pager.click(function(){ 
+                        $('.tm-paging-link').removeClass("active");
+                        $(this).addClass('active');
+                        var page = $(this).eq(0).attr(pageAttribute);
+                        showItems(page);
+                    });
+
+                    $pager.appendTo($('.tm-paging'));
+                }
+            }
+
+            function showItems(currentPage) {
+                for(let i = 0; i < galleryItems.length; i++) {
+                    galleryItems[i].classList.remove("show");
+                    galleryItems[i].classList.add("hide");
+
+                    if(i >= (currentPage * itemsPerPage) - itemsPerPage && i < currentPage * itemsPerPage) {
+                        galleryItems[i].classList.remove("hide");
+                        galleryItems[i].classList.add("show");
+                    }
+                }
+            }
+
+            setPagination(1);
+            showItems(1);
+
+            /****************** Magnific Popup ***********/
+
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
+</body>
+</html>
